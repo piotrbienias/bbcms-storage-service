@@ -6,8 +6,13 @@
 
 'use strict';
 
+import * as dotenv from 'dotenv';
 
-export default {
+
+dotenv.config();
+
+
+module.exports = {
     development: {
         username: process.env['DB_USER'],
         password: process.env['DB_PASSWORD'],

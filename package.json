@@ -4,7 +4,9 @@
   "description": "bbCMS Storage Service",
   "main": "index.js",
   "scripts": {
-    "start": "gulp compile && node dist/index.js"
+    "seed": "node_modules/.bin/sequelize db:seed:all",
+    "migrations": "node_modules/.bin/sequelize db:migrate",
+    "start": "gulp compile && npm run migrations && node dist/index.js"
   },
   "keywords": [
     "bbcms",
